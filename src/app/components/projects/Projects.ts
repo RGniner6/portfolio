@@ -2,7 +2,7 @@ export interface Project {
   name: string;
   description: string;
   tech?: string[];
-  git: string;
+  git?: string;
   live?: string;
 }
 

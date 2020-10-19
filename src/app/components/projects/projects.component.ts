@@ -8,10 +8,11 @@ import {Project, projects} from './Projects';
 })
 export class ProjectsComponent implements OnInit {
   projects: Project[];
-  constructor() { }
+  constructor() {
+    this.projects = projects;
+  }
 
   ngOnInit(): void {
-    this.projects = projects;
   }
 
 }

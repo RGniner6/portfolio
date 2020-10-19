@@ -7,12 +7,13 @@ import {Project} from '../Projects';
   styleUrls: ['./project.component.scss']
 })
 export class ProjectComponent implements OnInit {
-  @Input()
-  project: Project;
+  @Input() project: Project;
+  @Input() isLeft: boolean;
 
   constructor() {}
 
   ngOnInit(): void {
+    console.log('isLeft is :', this.isLeft);
   }
 
 }

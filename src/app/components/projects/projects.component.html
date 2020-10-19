@@ -7,9 +7,8 @@
       rem tenetur.
     </div>
   </div>
-  <div class="list">
-    <app-project>
-      <div class="banner-header">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse fuga inventore </div>
-    </app-project>
-  </div>
+  <app-project *ngFor="let project of projects; index as i"
+               [project]="project" [isLeft]="i%2==0">
+  </app-project>
+
 </section>

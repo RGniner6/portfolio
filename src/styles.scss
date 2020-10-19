@@ -12,6 +12,11 @@ body {
   padding: 0;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .section-header {
   letter-spacing: 5px;
   font-size: 15px;
@@ -36,10 +41,17 @@ button {
   text-transform: uppercase;
   padding: 10px 10px;
   border: 1px solid rgba(0, 0, 0, 0.16);
+  cursor: pointer;
 
   line-height: 20px;
   letter-spacing: 4px;
   transition: .2s;
+
+  a {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
 
   &:hover {
     background-color: black;

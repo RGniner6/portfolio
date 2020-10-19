@@ -1,26 +1,21 @@
 <!--<h1><ng-content select=".banner-header"></ng-content></h1>-->
 <div class="project">
-  <div class="details">
-    <h3 class="title">This is my impressive project. Behold!</h3>
-    <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam, atque beatae commodi
-      distinctio dolore dolores doloribus dolorum explicabo magnam maiores minus, natus neque, quam recusandae
-      reprehenderit totam vel veniam.</p>
+  <div class="details" [ngClass]="{'flipped': !isLeft}">
+    <h3 class="title">{{project.name}}</h3>
+    <p class="desc">{{project.description}}</p>
   </div>
   <div class="card">
-    <img src="../../../../assets/example.png">
+    <img src="../../../../assets/example.png" alt="Screenshot of project: {{project.name}}">
     <div class="card-content">
       <div class="built-with">
         <p class="tech-used">Technologies used:</p>
-        <ng-content select=".tech"></ng-content>
         <ul>
-          <li>Angular</li>
-          <li>Node.js</li>
-          <li>Firebase</li>
+          <li *ngFor="let tech of project.tech">{{tech}}</li>
         </ul>
       </div>
       <div class="buttons">
-        <button class="button git">View Code</button>
-        <button class="button live">View Live</button>
+        <button *ngIf="project.git" class="button git"><a href="{{project.git}}">View Code</a></button>
+        <button *ngIf="project.live" class="button live"><a href="{{project.live}}">View Live</a></button>
       </div>
     </div>
 
