@@ -1,7 +1,38 @@
-.container {
+.hero {
   position: relative;
   height: calc(100vh - 50px);
   width: 100vw;
+  padding: 50px 30px;
+  overflow-x: hidden;
+}
+
+.hero-text {
+  //margin-top: 150px;
+  position: absolute;
+  top: 35%;
+  transform: translate(0%, -50%);
+  width: 45%;
+  .title {
+    font-weight: 800;
+    font-size: 60px;
+  }
+
+  .greeting {
+    letter-spacing: 5px;
+    font-size: 20px;
+
+    &:before {
+      background-color: rgba(0, 0, 0, 0.16);
+      content: "";
+      display: inline-block;
+      height: 1px;
+      position: relative;
+      vertical-align: middle;
+      width: 50px;
+      right: 16px;
+      margin-left: 16px;
+    }
+  }
 }
 
 
