@@ -12,3 +12,20 @@ body {
   padding: 0;
 }
 
+.section-header {
+  letter-spacing: 5px;
+  font-size: 15px;
+  text-transform: uppercase;
+
+  &:before {
+    background-color: rgba(0, 0, 0, 0.16);
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50px;
+    right: 16px;
+    margin-left: 16px;
+  }
+}
