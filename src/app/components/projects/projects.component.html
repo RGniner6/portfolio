@@ -7,10 +7,8 @@
       rem tenetur.
     </div>
   </div>
-  <div class="project-list">
-    <app-project *ngFor="let project of projects; index as i"
-                 [project]="project" [isLeft]="i%2==0">
-    </app-project>
-  </div>
+  <app-project *ngFor="let project of projects; index as i"
+               [project]="project" [isLeft]="i%2==0">
+  </app-project>
 
 </section>

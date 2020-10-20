@@ -1,8 +1,7 @@
-import {AfterViewInit, Component, ElementRef, Input, OnInit, QueryList, ViewChild, ViewChildren} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, HostListener, Input, OnInit, QueryList, ViewChild, ViewChildren} from '@angular/core';
 import {gsap} from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import {Project} from '../Projects';
-import {element} from 'protractor';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,12 +20,14 @@ export class ProjectComponent implements OnInit, AfterViewInit {
   @ViewChildren('techList') private techList: QueryList<ElementRef>;
   @ViewChild('buttons') private buttons: ElementRef;
   tl: any;
-  cardTl = gsap.timeline();
-
-  constructor() {}
+  detailsTl: any;
+  hideDetails = true;
+  constructor() {
+  }
 
   ngAfterViewInit(): void {
      this.slideCardUp();
+     this.slideDetailsIn();
   }
 
   ngOnInit(): void {
@@ -43,12 +44,17 @@ export class ProjectComponent implements OnInit, AfterViewInit {
       },
     });
 
-    // gsap.from(this.techList.nativeElement.childNodes, {
-    //   translateY: 20,
-    //   duration: 0.5,
-    //   stagger: 0.2,
-    //   delay: 2,
-    // });
+    this.detailsTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: this.details.nativeElement,
+        start: 'top 80%'
+      },
+      defaults: {
+        duration: 0.5,
+        autoAlpha: 0,
+        ease: 'power1.inOut',
+      },
+    });
 
     // TODO: Make description retractable for mobile
   }
@@ -62,34 +68,50 @@ export class ProjectComponent implements OnInit, AfterViewInit {
     this.tl
       .from(this.card.nativeElement, {
         translateY: 50,
-      })
+      }, 'first')
       .from(this.builtWith.nativeElement, {
         translateY: 20,
         duration: 0.3,
-      }, 'labels')
+      }, 'second')
       .from(this.getChildrenRefs(this.techList), {
         translateY: 20,
-        duration: 0.5,
+        duration: 0.3,
         stagger: 0.2,
-      })
+      }, 'third')
       .from(Array.from(this.buttons.nativeElement.childNodes), {
         translateY: 20,
-        duration: 0.5,
+        duration: 0.3,
         stagger: 0.2
-      })
-    ;
+      }, 'fourth');
+  }
+
+  slideDetailsIn() {
+    this.detailsTl
+      .from(this.details.nativeElement, {
+        translateX: this.isMobile? 0: this.isLeft? 30:-30,
+        translateY: this.isMobile? 30: 0,
+        autoAlpha: 1,
+      }, 'second')
+      .from(this.details.nativeElement.childNodes, {
+        translateY: 20,
+        stagger: 0.3,
+      });
+    return this.detailsTl;
   }
 
 
   hoverCard(reverse: boolean = false) {
-    this.cardTl.to(this.card.nativeElement, {
+    this.detailsTl.to(this.card.nativeElement, {
         duration: 0.3,
         boxShadow: '0 8px 16px 0 rgba(11,12,13,.08)',
         borderColor: 'transparent',
         translateY: -8,
       },
     );
-    this.cardTl.pause();
-    reverse ? this.cardTl.reverse() : this.cardTl.play();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  get isMobile(): boolean {
+    return window.innerWidth < 768.1;
   }
 }
