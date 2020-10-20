@@ -8,16 +8,20 @@
     <img src="../../../../assets/example.png" alt="Screenshot of project: {{project.name}}">
     <div class="card-content">
       <div class="built-with">
-        <p class="tech-used">Technologies used:</p>
+        <p #builtWith class="tech-used">Technologies used:</p>
         <ul>
-          <li *ngFor="let tech of project.tech">{{tech}}</li>
+          <li #techList *ngFor="let tech of project.tech">{{tech}}</li>
         </ul>
       </div>
-      <div class="buttons">
+      <ul #buttons class="buttons">
 <!--        <button class="button git">Learn More</button>-->
-        <button *ngIf="project.git" class="button git"><a href="{{project.git}}">View Code</a></button>
-        <button *ngIf="project.live" class="button live"><a href="{{project.live}}">View Live</a></button>
-      </div>
+        <li>
+          <button *ngIf="project.git" class="button git"><a href="{{project.git}}">View Code</a></button>
+        </li>
+        <li>
+          <button *ngIf="project.live" class="button live"><a href="{{project.live}}">View Live</a></button>
+        </li>
+      </ul>
     </div>
 
   </div>
