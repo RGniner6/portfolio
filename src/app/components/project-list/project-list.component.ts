@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {Project, projects} from './Projects';
+import {NavigationService} from '../../services/navigation.service';
 
 @Component({
   selector: 'app-projects',
@@ -7,12 +8,14 @@ import {Project, projects} from './Projects';
   styleUrls: ['./project-list.component.scss']
 })
 export class ProjectListComponent implements OnInit {
+  @ViewChild('projectRef', {static: true}) projectElement: ElementRef;
   projects: Project[];
-  constructor() {
+  constructor(private navigationService: NavigationService) {
     this.projects = projects;
   }
 
   ngOnInit(): void {
+    this.navigationService.addLink('projects', this.projectElement);
   }
 
 }

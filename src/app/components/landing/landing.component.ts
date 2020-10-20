@@ -1,5 +1,6 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import { gsap } from 'gsap';
+import {NavigationService} from '../../services/navigation.service';
 
 @Component({
   selector: 'app-landing',
@@ -8,15 +9,17 @@ import { gsap } from 'gsap';
 })
 export class LandingComponent implements OnInit {
 
+  @ViewChild('landingRef', {static: true}) landingRef: ElementRef;
   @ViewChild('arm', {static: true}) arm: ElementRef;
   @ViewChild('rahul', {static: true}) illustration: ElementRef;
   @ViewChild('greeting', {static: true}) greeting: ElementRef;
   @ViewChild('intro', {static: true}) intro: ElementRef;
   // @ViewChild('pitch', {static: true}) pitch: ElementRef;
   tl = gsap.timeline();
-  constructor() { }
+  constructor(private navigationService: NavigationService) { }
 
   ngOnInit(): void {
+    this.navigationService.addLink('about', this.landingRef);
     this.heroAnimation();
     this.rahulAnimation();
   }

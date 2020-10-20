@@ -2,6 +2,7 @@ import {AfterViewInit, Component, ElementRef, HostListener, Input, OnInit, Query
 import {gsap} from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import {Project} from '../Projects';
+import {NavigationService} from '../../../services/navigation.service';
 
 gsap.registerPlugin(ScrollTrigger);
 

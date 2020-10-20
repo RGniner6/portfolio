@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {NavigationService} from '../../services/navigation.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('contactRef', {static: true}) contactElement: ElementRef;
+
+  constructor(private navigationService: NavigationService) { }
 
   ngOnInit(): void {
+    this.navigationService.addLink('contact', this.contactElement);
   }
 
 }

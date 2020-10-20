@@ -1,42 +1,90 @@
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 
 .nav {
+  position: fixed;
+  right: 0;
+  z-index: 3;
+
   display: flex;
-  width: 100%;
-  align-items: center;
+  flex-direction: column;
+  width: 120px;
+  height: 100vh;
   justify-content: space-between;
+
   text-transform: uppercase;
   font-weight: 600;
-  height: 100px;
-}
-
-.logo {
-  font-size: 30px;
-  margin: 0 50px;
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);
-  color: white;
   background-color: black;
-  padding: 10px 10px 45px 10px;
-
-  font-family: 'Major Mono Display', monospace;
 }
+
+.toggle-btn {
+  position: relative;
+  margin: 1em;
+  padding: 1.5em 1em;
+  //width: 40px;
+  //height: 12px;
+  //right: 0;
+  //z-index: 1;
+
+  span.one {
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+  }
+
+  span.two {
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    //margin-top: 12px;
+  }
+}
+
 
 .nav-list {
-  flex-basis: 70%;
+  flex-basis: 50%;
 
   ul {
     list-style: none;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    li {
+      display: block;
+      width: 100%;
+      padding: 25px 5px;
+      color: white;
+
+      fa-icon {
+        font-size: 35px;
+        display: block;
+        text-align: center;
+      }
+
+      .label {
+        display: block;
+        text-align: center;
+        font-size: 13px;
+      }
+    }
 
     &>*:not(:last-child) {
-      margin-right: 40px;
+      //margin-right: 40px;
     }
   }
 
   a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
   }
 }
