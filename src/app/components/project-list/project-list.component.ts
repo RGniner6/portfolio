@@ -3,10 +3,10 @@ import {Project, projects} from './Projects';
 
 @Component({
   selector: 'app-projects',
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  templateUrl: './project-list.component.html',
+  styleUrls: ['./project-list.component.scss']
 })
-export class ProjectsComponent implements OnInit {
+export class ProjectListComponent implements OnInit {
   projects: Project[];
   constructor() {
     this.projects = projects;

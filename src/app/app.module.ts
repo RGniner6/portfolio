@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
-import { ProjectsComponent } from './components/projects/projects.component';
-import { ProjectComponent } from './components/projects/project/project.component';
+import { ProjectListComponent } from './components/project-list/project-list.component';
+import { ProjectComponent } from './components/project-list/project/project.component';
 import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
@@ -16,7 +16,7 @@ import { ContactComponent } from './components/contact/contact.component';
     NavbarComponent,
     LandingComponent,
     PortfolioComponent,
-    ProjectsComponent,
+    ProjectListComponent,
     ProjectComponent,
     ContactComponent,
   ],
