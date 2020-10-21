@@ -1,8 +1,50 @@
 <section #contactRef class="contact">
   <div class="contact-text">
-    <div #sectionHeader class="section-header">Contact</div>
+    <div #sectionHeader class="section-header">Contact & more</div>
     <div #sectionDescription class="section-description">
       Have a question or want to work together? Let's get in touch!
+    </div>
+  </div>
+  <div class="section-body">
+    <div class="info-panel">
+      <div class="contact-details">
+        <p class="prompt">Leave me a message on the right or reach me on: </p>
+        <ul class="links">
+          <li><a href="#"><button>
+<!--            <fa-icon [icon]="['fas', 'envelope']"></fa-icon>-->
+            <span>Email</span>
+          </button></a></li>
+          <li><a href="#"><button>
+<!--            <fa-icon [icon]="['fab', 'linkedin']"></fa-icon>-->
+            <span>LinkedIn</span>
+          </button></a></li>
+          <li><a href="#"><button>
+<!--            <fa-icon [icon]="['fab', 'github']"></fa-icon>-->
+            <span>Github</span>
+          </button></a></li>
+        </ul>
+        <div class="resume">
+          <p class="prompt">More information can be found on my resume: </p>
+          <button class="button">Download resume</button>
+        </div>
+      </div>
+    </div>
+    <div class="message-form">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="name">Name </label>
+          <input type="text" id="name" formControlName="name">
+        </div>
+        <div class="form-group">
+          <label for="name">Email </label>
+          <input type="text" id="email" formControlName="email">
+        </div>
+        <div class="form-group">
+          <label for="name">Message </label>
+          <textarea rows="5" type="text" id="message" formControlName="message"></textarea>
+        </div>
+        <button type="submit">Send</button>
+      </form>
     </div>
   </div>
 </section>

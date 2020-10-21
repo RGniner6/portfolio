@@ -1,16 +1,134 @@
 .contact {
   max-width: 90vw;
+  //min-height: 100vh;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 30px;
+  padding: 50px 0;
 }
 
 .contact-text {
   margin-top: 50px;
-  width: 60%;
+  width: 90%;
 
   .section-description {
     margin: 20px 0;
   }
 }
+
+.section-body {
+  display: flex;
+  justify-content: space-around;
+  @media (max-width: 992px) {
+    flex-direction: column;
+  }
+  //align-items: center;
+}
+
+.info-panel {
+  align-self: auto;
+  flex-basis: 50%;
+  margin : 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  @media (max-width: 992px) {
+    order: 2;
+  }
+
+  .contact-details {
+    margin-top: 50px;
+  }
+
+  .resume {
+    margin: 50px 0 0 0;
+
+  }
+
+  button {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 15px;
+    flex-wrap: wrap;
+
+
+
+    li {
+      a {
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+      }
+      fa-icon {
+        font-size: 30px;
+        margin-right: 10px;
+      }
+
+      span {
+        margin: auto 0;
+      }
+    }
+  }
+
+}
+
+.message-form {
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  flex-basis: 50%;
+  margin : 0 50px;
+  max-width: 500px;
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    width: 100%;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      justify-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      color: black;
+      font-size: 16px;
+      line-height: 25px;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    input, textarea {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      border-radius: unset;
+
+      border: 1px solid rgba(0, 0, 0, 0.16);
+      font-size: 21px;
+      line-height: 33px;
+      letter-spacing: .2px;
+      font-weight: 400;
+      padding: 15px 20px;
+      font: inherit;
+    }
+
+    textarea {
+      resize: none;
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+  }
+}
+
+

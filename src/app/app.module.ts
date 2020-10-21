@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,9 @@ import {faAngular} from '@fortawesome/free-brands-svg-icons/faAngular';
 import {faFileAlt} from '@fortawesome/free-solid-svg-icons/faFileAlt';
 import {faGrin} from '@fortawesome/free-solid-svg-icons/faGrin';
 import {faGithubSquare} from '@fortawesome/free-brands-svg-icons/faGithubSquare';
+import {ReactiveFormsModule} from '@angular/forms';
+import {faEnvelope} from '@fortawesome/free-solid-svg-icons/faEnvelope';
+import {faGithub} from '@fortawesome/free-brands-svg-icons/faGithub';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,9 @@ import {faGithubSquare} from '@fortawesome/free-brands-svg-icons/faGithubSquare'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -39,7 +45,7 @@ import {faGithubSquare} from '@fortawesome/free-brands-svg-icons/faGithubSquare'
 export class AppModule {
   constructor(private library: FaIconLibrary) {
     library.addIcons(
-      faLinkedin, faGithubSquare, faAddressCard, faCode, faAngular, faNodeJs, faFileAlt, faGrin
+      faLinkedin, faEnvelope, faGithubSquare, faGithub, faAddressCard, faCode, faAngular, faNodeJs, faFileAlt, faGrin
     );
   }
 }
