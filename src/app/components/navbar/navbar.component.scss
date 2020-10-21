@@ -87,8 +87,8 @@
       }
     }
 
-    &>*:not(:last-child) {
-      //margin-right: 40px;
+    &:last-child {
+      margin-bottom: 50px;
     }
   }
 
@@ -96,5 +96,9 @@
     text-decoration: none;
     color: inherit;
     cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    flex-basis: 70%;
   }
 }
