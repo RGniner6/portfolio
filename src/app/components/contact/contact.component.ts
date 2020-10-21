@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
 import {NavigationService} from '../../services/navigation.service';
 import {FormBuilder, FormGroup, NgForm, Validators} from '@angular/forms';
 import {HttpClient, HttpClientModule, HttpHeaders} from '@angular/common/http';
@@ -39,6 +39,11 @@ export class ContactComponent implements OnInit {
         }
       );
     }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  get isMobile(): boolean {
+    return window.innerWidth < 768.1;
   }
 
 }
