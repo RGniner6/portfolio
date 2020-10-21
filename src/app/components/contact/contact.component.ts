@@ -2,6 +2,7 @@ import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/c
 import {NavigationService} from '../../services/navigation.service';
 import {FormBuilder, FormGroup, NgForm, Validators} from '@angular/forms';
 import {HttpClient, HttpClientModule, HttpHeaders} from '@angular/common/http';
+import {gsap} from 'gsap';
 
 @Component({
   selector: 'app-contact',
@@ -11,7 +12,11 @@ import {HttpClient, HttpClientModule, HttpHeaders} from '@angular/common/http';
 export class ContactComponent implements OnInit {
 
   @ViewChild('contactRef', {static: true}) contactElement: ElementRef;
+  @ViewChild('sectionHeader', {static: true}) sectionHeader: ElementRef;
+  @ViewChild('sectionDescription', {static: true}) sectionDesc: ElementRef;
   form: FormGroup;
+  tl: any;
+  sectionTl: any;
   constructor(private navigationService: NavigationService,
               private http: HttpClient,
               private fb: FormBuilder) {
@@ -24,6 +29,30 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {
     this.navigationService.addLink('contact', this.contactElement);
+    this.tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: this.sectionHeader.nativeElement,
+        start: 'top 80%'
+      },
+      defaults: {
+        duration: 0.8,
+        autoAlpha: 0,
+        ease: 'power1.inOut',
+      },
+    });
+
+    this.sectionTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: this.sectionHeader.nativeElement,
+        start: 'top 80%'
+      },
+      defaults: {
+        duration: 0.8,
+        autoAlpha: 0,
+        ease: 'power1.inOut',
+      },
+    });
+    this.sectionHeaderAnimation();
   }
 
   onSubmit() {
@@ -39,6 +68,12 @@ export class ContactComponent implements OnInit {
         }
       );
     }
+  }
+
+  sectionHeaderAnimation() {
+    this.tl
+      .from(this.sectionHeader.nativeElement, {duration: 1, translateX: -160, opacity: 0, ease: 'power1.inOut'}, 'intro-text')
+      .from(this.sectionDesc.nativeElement, {duration: 1.5, translateX: 130, scale: 1.2, opacity: 0,  }, 'intro-text');
   }
 
   @HostListener('window:resize', ['$event'])

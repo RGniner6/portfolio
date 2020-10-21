@@ -77,13 +77,13 @@ export class ProjectComponent implements OnInit, AfterViewInit {
       .from(this.getChildrenRefs(this.techList), {
         translateY: 20,
         duration: 0.3,
-        stagger: 0.2,
+        stagger: 0.1,
       }, 'third')
       .from(Array.from(this.buttons.nativeElement.childNodes), {
         translateY: 20,
         duration: 0.3,
-        stagger: 0.2
-      }, 'fourth');
+        stagger: 0.1
+      }, 'third');
   }
 
   slideDetailsIn() {
