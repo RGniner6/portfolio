@@ -10,7 +10,6 @@
 }
 
 .landing-text {
-  //margin-top: 150px;
   position: absolute;
   top: 35%;
   transform: translate(0%, -50%);
@@ -27,10 +26,11 @@
 
   @media (max-width: 768px) {
     position: absolute;
-    //padding: 20px;
+    top: 10%;
+    transform: translate(0,0);
     width: 100%;
     .title {
-      font-size: 50px;
+      font-size: 30px;
     }
 
   }
@@ -46,7 +46,7 @@
   @media (max-width: 768px) {
     width: 60%;
     max-width: 45vh;
-    bottom: 0%;
+    bottom: 15%;
     display: flex;
     align-items: flex-end;
   }
