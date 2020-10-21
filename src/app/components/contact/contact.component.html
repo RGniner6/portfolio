@@ -6,8 +6,8 @@
     </div>
   </div>
   <div class="section-body">
-    <div class="info-panel">
-      <div class="contact-details">
+    <div #infoPanel class="info-panel">
+      <div #info class="contact-details">
         <p class="prompt">Leave me a message {{isMobile ? 'above':'on the right'}} or reach me on: </p>
         <ul class="links">
           <li><a href="mailto:rahul.gururaj96@gmail.com" target="_blank"><button>
@@ -30,8 +30,8 @@
       </div>
     </div>
     <div class="message-panel">
-      <div class="message-form">
-        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div #card class="message-form">
+        <form #form [formGroup]="form" (ngSubmit)="onSubmit()">
           <div class="form-group">
             <label for="name">Name </label>
             <input type="text" id="name" formControlName="name">
