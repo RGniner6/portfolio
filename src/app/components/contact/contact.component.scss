@@ -19,7 +19,9 @@
 .section-body {
   display: flex;
   justify-content: space-around;
-  @media (max-width: 992px) {
+  //max-width: 1500px;
+  //margin-right: auto;
+  @media (max-width: 768px) {
     flex-direction: column;
   }
   //align-items: center;
@@ -33,12 +35,13 @@
   flex-direction: column;
   justify-content: space-around;
 
-  @media (max-width: 992px) {
+  @media (max-width: 768px) {
     order: 2;
   }
 
   .contact-details {
     margin-top: 50px;
+    max-width: 500px;
   }
 
   .resume {
@@ -80,11 +83,18 @@
 
 }
 
+.message-panel {
+  flex-basis: 50%;
+}
+
 .message-form {
   border: 1px solid rgba(0, 0, 0, 0.16);
-  flex-basis: 50%;
-  margin : 0 50px;
+  margin : 0 auto;
   max-width: 500px;
+  @media (min-width: 1200px) {
+    margin: 0;
+  }
+
   form {
     display: flex;
     flex-direction: column;

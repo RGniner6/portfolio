@@ -29,22 +29,24 @@
         </div>
       </div>
     </div>
-    <div class="message-form">
-      <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <div class="form-group">
-          <label for="name">Name </label>
-          <input type="text" id="name" formControlName="name">
-        </div>
-        <div class="form-group">
-          <label for="name">Email </label>
-          <input type="text" id="email" formControlName="email">
-        </div>
-        <div class="form-group">
-          <label for="name">Message </label>
-          <textarea rows="5" type="text" id="message" formControlName="message"></textarea>
-        </div>
-        <button type="submit">Send</button>
-      </form>
+    <div class="message-panel">
+      <div class="message-form">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="name">Name </label>
+            <input type="text" id="name" formControlName="name">
+          </div>
+          <div class="form-group">
+            <label for="name">Email </label>
+            <input type="text" id="email" formControlName="email">
+          </div>
+          <div class="form-group">
+            <label for="name">Message </label>
+            <textarea rows="5" type="text" id="message" formControlName="message"></textarea>
+          </div>
+          <button type="submit">Send</button>
+        </form>
+      </div>
     </div>
   </div>
 </section>
