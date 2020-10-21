@@ -1,7 +1,7 @@
-<div class="nav">
-  <div #navButton class="toggle-btn">
-    <span class="one"></span>
-    <span class="two"></span>
+<div #navBox class="nav">
+  <div #navButton (click)="toggleMenu()" class="toggle-btn">
+    <span #topLine class="one"></span>
+    <span #bottomLine class="two"></span>
   </div>
 
   <div class="nav-list">
