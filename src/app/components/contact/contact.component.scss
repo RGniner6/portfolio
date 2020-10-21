@@ -34,7 +34,7 @@
   margin : 0 50px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-around;
 
   @media (max-width: 768px) {
     order: 2;
