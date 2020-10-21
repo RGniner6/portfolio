@@ -47,6 +47,9 @@ export class NavbarComponent implements OnInit {
         rotate: -45,
         top: '50%',
         backgroundColor: 'white'
+      }, 'toggle-menu')
+      .to(this.navButton.nativeElement, {
+        background: 'none'
       }, 'toggle-menu');
   }
 
