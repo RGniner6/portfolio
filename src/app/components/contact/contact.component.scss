@@ -19,6 +19,7 @@
 .section-body {
   display: flex;
   justify-content: space-around;
+  margin: 100px 0;
   //max-width: 1500px;
   //margin-right: auto;
   @media (max-width: 768px) {
@@ -33,15 +34,21 @@
   margin : 0 50px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
 
   @media (max-width: 768px) {
     order: 2;
+    .prompt {
+      //text-align: center;
+    }
   }
 
   .contact-details {
     margin-top: 50px;
-    max-width: 500px;
+    @media (min-width: 768px) {
+      margin-top: 0;
+      max-width: 500px;
+    }
   }
 
   .resume {
@@ -59,7 +66,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 15px;
     flex-wrap: wrap;
 
 
@@ -85,14 +91,17 @@
 
 .message-panel {
   flex-basis: 50%;
+  padding: 0 20px;
 }
 
 .message-form {
   border: 1px solid rgba(0, 0, 0, 0.16);
   margin : 0 auto;
   max-width: 500px;
+  min-width: 300px;
   @media (min-width: 1200px) {
     margin: 0;
+    //padding: 0 40px;
   }
 
   form {
