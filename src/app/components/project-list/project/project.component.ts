@@ -45,17 +45,19 @@ export class ProjectComponent implements OnInit, AfterViewInit {
       },
     });
 
-    this.detailsTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: this.details.nativeElement,
-        start: 'top 80%'
-      },
-      defaults: {
-        duration: 0.5,
-        autoAlpha: 0,
-        ease: 'power1.inOut',
-      },
-    });
+    if (!this.isMobile()) {
+      this.detailsTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: this.details.nativeElement,
+          start: 'top 80%'
+        },
+        defaults: {
+          duration: 0.5,
+          autoAlpha: 0,
+          ease: 'power1.inOut',
+        },
+      });
+    }
 
     // TODO: Make description retractable for mobile
   }
@@ -88,12 +90,12 @@ export class ProjectComponent implements OnInit, AfterViewInit {
 
   slideDetailsIn() {
     this.detailsTl
-      .from(this.details.nativeElement, {
+      .from(this.details?.nativeElement, {
         translateX: this.isMobile()? 0: this.isLeft? 30:-30,
         translateY: this.isMobile()? 30: 0,
         autoAlpha: 1,
       }, 'second')
-      .from(this.details.nativeElement.childNodes, {
+      .from(this.details?.nativeElement.childNodes, {
         translateY: 20,
         stagger: 0.3,
       });

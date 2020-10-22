@@ -21,6 +21,7 @@ import {faGithubSquare} from '@fortawesome/free-brands-svg-icons/faGithubSquare'
 import {ReactiveFormsModule} from '@angular/forms';
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons/faEnvelope';
 import {faGithub} from '@fortawesome/free-brands-svg-icons/faGithub';
+import { ProjectDetailsComponent } from './components/project-details/project-details.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {faGithub} from '@fortawesome/free-brands-svg-icons/faGithub';
     ProjectListComponent,
     ProjectComponent,
     ContactComponent,
+    ProjectDetailsComponent,
   ],
   imports: [
     BrowserModule,

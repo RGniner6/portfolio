@@ -1,6 +1,6 @@
 <!--<h1><ng-content select=".banner-header"></ng-content></h1>-->
 <div class="project">
-  <div #details class="details" [ngClass]="{'flipped': !isLeft}">
+  <div *ngIf="!isMobile()" #details class="details" [ngClass]="{'flipped': !isLeft}">
     <h3 #title class="title">{{project.name}}</h3>
     <p #desc class="desc">{{project.description}}</p>
   </div>
@@ -14,9 +14,9 @@
         </ul>
       </div>
       <ul #buttons class="buttons">
-        <!--<li>
-          <button *ngIf="isMobile()" class="button git" (click)="learnMoreClicked()">Learn More</button>
-        </li>-->
+        <li>
+          <button *ngIf="isMobile()" class="button learn-more" [routerLink]="['project', project.id]">Learn More</button>
+        </li>
         <li>
           <button *ngIf="project.git" class="button git"><a href="{{project.git}}">View Code</a></button>
         </li>
