@@ -37,6 +37,17 @@ a {
     right: 16px;
     margin-left: 16px;
   }
+
+  @media (max-width: 768px) {
+    //font-size: 14px;
+    //letter-spacing: 3px;
+
+    &:before {
+      width: 30px;
+      right: 10px;
+      margin-left: 10px;
+    }
+  }
 }
 
 button {
