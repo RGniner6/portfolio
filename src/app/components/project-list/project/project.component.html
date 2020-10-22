@@ -10,7 +10,7 @@
       <div class="built-with">
         <p #builtWith class="tech-used">Technologies used:</p>
         <ul>
-          <li #techList *ngFor="let tech of project.tech">{{tech}}</li>
+          <li class="tech-item" #techList *ngFor="let tech of project.tech">{{tech}}</li>
         </ul>
       </div>
       <ul #buttons class="buttons">
