@@ -20,10 +20,11 @@
               <button #cardToggleFs class="button back"><a routerLink="/">< Back</a></button>
             </li>
             <li>
-              <button #gitFs *ngIf="project.git" class="button git"><a href="{{project.git}}">View Code</a></button>
+              <button #gitFs *ngIf="project.git" class="button git"><a href="{{project.git}}" target="_blank">View Code</a></button>
             </li>
             <li>
-              <button #liveFs *ngIf="project.live" class="button live"><a href="{{project.live}}">View Live</a></button>
+              <button #liveFs *ngIf="project.live"
+                      class="button live"><a href="{{project.live}}" target="_blank">View Live</a></button>
             </li>
           </ul>
         </div>

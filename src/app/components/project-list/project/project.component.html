@@ -18,10 +18,10 @@
           <button *ngIf="isMobile()" class="button learn-more" [routerLink]="['project', project.id]">Learn More</button>
         </li>
         <li>
-          <button *ngIf="project.git" class="button git"><a href="{{project.git}}">View Code</a></button>
+          <button *ngIf="project.git" class="button git"><a href="{{project.git}}" target="_blank">View Code</a></button>
         </li>
         <li>
-          <button *ngIf="project.live" class="button live"><a href="{{project.live}}">View Live</a></button>
+          <button *ngIf="project.live" class="button live"><a href="{{project.live}}" target="_blank">View Live</a></button>
         </li>
       </ul>
     </div>
