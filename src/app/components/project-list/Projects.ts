@@ -10,7 +10,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    name: 'This is my impressive project. Behold!',
+    name: 'Sorrowscopes',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam, atque beatae commodi\n' +
       '      distinctio dolore dolores doloribus dolorum explicabo magnam maiores minus, natus neque, quam recusandae\n' +
       '      reprehenderit totam vel veniam.',
@@ -20,7 +20,7 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    name: 'This is my impressive project. Behold!',
+    name: 'Kanban Board',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam, atque beatae commodi\n' +
       '      distinctio dolore dolores doloribus dolorum explicabo magnam maiores minus, natus neque, quam recusandae\n' +
       '      reprehenderit totam vel veniam.',
@@ -29,7 +29,7 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    name: 'This is my impressive project. Behold!',
+    name: 'Run Stat',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam, atque beatae commodi\n' +
       '      distinctio dolore dolores doloribus dolorum explicabo magnam maiores minus, natus neque, quam recusandae\n' +
       '      reprehenderit totam vel veniam.',
@@ -38,7 +38,7 @@ export const projects: Project[] = [
   },
   // {
   //   id: 4,
-  //   name: 'This is my impressive project. Behold!',
+  //   name: 'This Portfolio!',
   //   description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam, atque beatae commodi\n' +
   //     '      distinctio dolore dolores doloribus dolorum explicabo magnam maiores minus, natus neque, quam recusandae\n' +
   //     '      reprehenderit totam vel veniam.',

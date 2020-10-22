@@ -23,6 +23,7 @@
     width: 300px;
     @media (max-width: 768px) {
       width: 80%;
+      max-width: 500px
     }
   }
 }
