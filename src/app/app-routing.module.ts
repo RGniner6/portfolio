@@ -6,7 +6,7 @@ import {ProjectDetailsComponent} from './components/project-details/project-deta
 
 
 const routes: Routes = [
-  { path: '', component: PortfolioComponent },
+  { path: '', component: PortfolioComponent, data: {animation: 'isLeft'} },
   { path: 'project/:projectId', component: ProjectDetailsComponent, data: {animation: 'isRight'} },
   { path: '**', redirectTo: '', component: PortfolioComponent, data: {animation: 'isLeft'} },
 ];

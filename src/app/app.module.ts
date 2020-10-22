@@ -22,6 +22,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons/faEnvelope';
 import {faGithub} from '@fortawesome/free-brands-svg-icons/faGithub';
 import { ProjectDetailsComponent } from './components/project-details/project-details.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ProjectDetailsComponent } from './components/project-details/project-de
     FontAwesomeModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
