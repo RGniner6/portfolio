@@ -70,16 +70,21 @@
         font-weight: bold;
       }
 
-      ul {
+      .tech-list {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
+        margin-top: 10px;
+        :not(:last-child) {
+          margin-right: 10px;
+        }
+        .tech-item {
+          list-style: none;
+          font-size: 14px;
+        }
       }
-      .tech-item {
-        list-style: none;
-        padding: 15px 10px;
-        font-size: 14px;
-      }
+
+
 
       .buttons {
         max-width: 100%;
@@ -87,8 +92,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        padding: 20px 0 0 0 ;
-        margin: 10px 0 20px 0;
+        //padding: 20px 0 0 0 ;
+        margin: 20px 0;
         li {
           list-style: none;
           width: 100%;

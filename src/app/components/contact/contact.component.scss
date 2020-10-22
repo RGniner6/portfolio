@@ -19,7 +19,7 @@
 .section-body {
   display: flex;
   justify-content: space-around;
-  margin: 100px 0;
+  margin: 100px 0 20px 0;
   //max-width: 1500px;
   //margin-right: auto;
   @media (max-width: 768px) {
@@ -38,6 +38,7 @@
 
   @media (max-width: 768px) {
     order: 2;
+    margin: 0;
     .prompt {
       //text-align: center;
     }
