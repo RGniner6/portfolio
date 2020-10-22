@@ -7,29 +7,35 @@
   </div>
   <div class="section-body">
     <div #infoPanel class="info-panel">
-      <div *ngIf="!isMobile" class="info-intro">
-        Have a question or want to work together? Let's get in touch!
-      </div>
-      <div #info class="contact-details">
-        <p class="prompt">Leave me a message {{isMobile ? 'above':'on the right'}} or reach me on: </p>
-        <ul class="links">
-          <li><a href="mailto:rahul.gururaj96@gmail.com" target="_blank"><button>
-<!--            <fa-icon [icon]="['fas', 'envelope']"></fa-icon>-->
-            <span>Email</span>
-          </button></a></li>
-          <li><a href="https://www.linkedin.com/in/rahul-gururaj-b7405b149/" target="_blank"><button>
-<!--            <fa-icon [icon]="['fab', 'linkedin']"></fa-icon>-->
-            <span>LinkedIn</span>
-          </button></a></li>
-          <!--<li><a href="https://github.com/RGniner6" target="_blank"><button>
-&lt;!&ndash;            <fa-icon [icon]="['fab', 'github']"></fa-icon>&ndash;&gt;
-            <span>Github</span>
-          </button></a></li>-->
-        </ul>
-      </div>
-      <div class="resume">
-        <p class="prompt">Want more information?</p>
-        <button class="button">Download resume</button>
+      <div class="info">
+        <div *ngIf="!isMobile" class="info-intro">
+          Have a question or want to work together? Let's get in touch!
+        </div>
+        <div #info class="contact-details">
+          <p class="prompt">Leave me a message {{isMobile ? 'above' : 'on the right'}} or reach me on: </p>
+          <ul class="links">
+            <li><a href="mailto:rahul.gururaj96@gmail.com" target="_blank">
+              <button>
+                <!--            <fa-icon [icon]="['fas', 'envelope']"></fa-icon>-->
+                <span>Email</span>
+              </button>
+            </a></li>
+            <li><a href="https://www.linkedin.com/in/rahul-gururaj-b7405b149/" target="_blank">
+              <button>
+                <!--            <fa-icon [icon]="['fab', 'linkedin']"></fa-icon>-->
+                <span>LinkedIn</span>
+              </button>
+            </a></li>
+            <!--<li><a href="https://github.com/RGniner6" target="_blank"><button>
+  &lt;!&ndash;            <fa-icon [icon]="['fab', 'github']"></fa-icon>&ndash;&gt;
+              <span>Github</span>
+            </button></a></li>-->
+          </ul>
+        </div>
+        <div class="resume">
+          <p class="prompt">Want more information?</p>
+          <button class="button">Download resume</button>
+        </div>
       </div>
     </div>
     <div class="message-panel">
