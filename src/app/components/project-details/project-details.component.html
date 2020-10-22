@@ -1,0 +1,33 @@
+<div class="hidden">
+  <div #cardFs class="card-fs">
+    <div class="content-fs">
+      <img src="assets/example.png"
+           alt="Screenshot of project: {{project.name}}">
+      <div class="card-content">
+        <div class="details">
+          <h3 #titleFs class="title">{{project.name}}</h3>
+          <p #descFs class="desc">{{project.description}}</p>
+        </div>
+        <div class="extra-details">
+          <div class="built-with">
+            <p #builtWithFs class="tech-used">Technologies used:</p>
+            <ul class="tech-list">
+              <li class="tech-item" #techListFs *ngFor="let tech of project.tech">{{tech}}</li>
+            </ul>
+          </div>
+          <ul #buttonsFs class="buttons">
+            <li class="back-item">
+              <button #cardToggleFs class="button back"><a routerLink="/">< Back</a></button>
+            </li>
+            <li>
+              <button #gitFs *ngIf="project.git" class="button git"><a href="{{project.git}}">View Code</a></button>
+            </li>
+            <li>
+              <button #liveFs *ngIf="project.live" class="button live"><a href="{{project.live}}">View Live</a></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,95 @@
+
+.card-fs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100vw;
+  background: white;
+
+  .content-fs {
+    margin: 0 auto;
+    img {
+      width: 100%;
+      max-height: 60vh;
+      min-height: 300px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      max-width: 992px;
+      padding: 20px 30px;
+      margin: 0 auto;
+    }
+
+    .title {
+      font-size: 30px;
+      text-transform: uppercase;
+    }
+
+    .built-with, .buttons {
+      margin: 40px 0;
+    }
+
+    .tech-used {
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    .tech-list, {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin-top: 10px;
+      :not(:last-child) {
+        margin-right: 10px;
+      }
+      .tech-item {
+        list-style: none;
+        //text-transform: uppercase;
+        font-size: 16px;
+        //font-weight: bold;
+      }
+    }
+
+    .buttons {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin-top: 15px;
+
+      :not(:last-child) {
+        margin-right: 10px;
+      }
+      button {
+        min-width: 180px;
+      }
+      .back {
+        color: white;
+        background: black;
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        :not(:last-child) {
+          margin-right: 0;
+        }
+        button {
+          margin: 10px 0;
+          width: 100%;
+        }
+        .back-item {
+          order: 3;
+        }
+      }
+    }
+
+    //.extra-details {
+    //  display: flex;
+    //}
+
+  }
+
+}
