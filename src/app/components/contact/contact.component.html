@@ -1,18 +1,18 @@
 <section #contactRef class="contact">
   <div class="contact-text">
     <div #sectionHeader class="section-header">Contact & more</div>
-    <div *ngIf="isMobile" #sectionDescription class="section-description">
+    <div *ngIf="false" #sectionDescription class="section-description">
       Have a question or want to work together? Let's get in touch!
     </div>
   </div>
   <div class="section-body">
     <div #infoPanel class="info-panel">
       <div class="info">
-        <div *ngIf="!isMobile" class="info-intro">
+        <div class="info-intro">
           Have a question or want to work together? Let's get in touch!
         </div>
         <div #info class="contact-details">
-          <p class="prompt">Leave me a message {{isMobile ? 'above' : 'on the right'}} or reach me on: </p>
+          <p class="prompt">Leave me a message {{isMobile() ? 'below' : 'on the right'}} or reach me on: </p>
           <ul class="links">
             <li><a href="mailto:rahul.gururaj96@gmail.com" target="_blank">
               <button>

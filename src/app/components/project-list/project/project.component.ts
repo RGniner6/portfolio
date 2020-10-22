@@ -89,8 +89,8 @@ export class ProjectComponent implements OnInit, AfterViewInit {
   slideDetailsIn() {
     this.detailsTl
       .from(this.details.nativeElement, {
-        translateX: this.isMobile? 0: this.isLeft? 30:-30,
-        translateY: this.isMobile? 30: 0,
+        translateX: this.isMobile()? 0: this.isLeft? 30:-30,
+        translateY: this.isMobile()? 30: 0,
         autoAlpha: 1,
       }, 'second')
       .from(this.details.nativeElement.childNodes, {
@@ -112,7 +112,7 @@ export class ProjectComponent implements OnInit, AfterViewInit {
   }
 
   @HostListener('window:resize', ['$event'])
-  get isMobile(): boolean {
+  isMobile(): boolean {
     return window.innerWidth < 768.1;
   }
 }

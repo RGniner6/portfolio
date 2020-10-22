@@ -13,7 +13,7 @@ export class ContactComponent implements OnInit {
 
   @ViewChild('contactRef', {static: true}) contactElement: ElementRef;
   @ViewChild('sectionHeader', {static: true}) sectionHeader: ElementRef;
-  @ViewChild('sectionDescription', {static: true}) sectionDesc: ElementRef;
+  // @ViewChild('sectionDescription', {static: true}) sectionDesc: ElementRef;
   @ViewChild('infoPanel', {static: true}) infoPanel: ElementRef;
   @ViewChild('info', {static: true}) info: ElementRef;
   @ViewChild('card', {static: true}) card: ElementRef;
@@ -94,7 +94,8 @@ export class ContactComponent implements OnInit {
   sectionHeaderAnimation() {
     this.tl
       .from(this.sectionHeader.nativeElement, {duration: 1, translateX: -160, opacity: 0, ease: 'power1.inOut'}, 'intro-text')
-      .from(this.sectionDesc.nativeElement, {duration: 1.5, translateX: 130, scale: 1.2, opacity: 0,  }, 'intro-text');
+      // .from(this.sectionDesc.nativeElement, {duration: 1.5, translateX: 130, scale: 1.2, opacity: 0,  }, 'intro-text')
+    ;
   }
 
   setCardAnimation() {
@@ -122,7 +123,7 @@ export class ContactComponent implements OnInit {
   }
 
   @HostListener('window:resize', ['$event'])
-  get isMobile(): boolean {
+  isMobile(): boolean {
     return window.innerWidth < 768.1;
   }
 

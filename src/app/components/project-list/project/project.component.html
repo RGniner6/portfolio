@@ -15,7 +15,7 @@
       </div>
       <ul #buttons class="buttons">
         <!--<li>
-          <button *ngIf="isMobile" class="button git" (click)="learnMoreClicked()">Learn More</button>
+          <button *ngIf="isMobile()" class="button git" (click)="learnMoreClicked()">Learn More</button>
         </li>-->
         <li>
           <button *ngIf="project.git" class="button git"><a href="{{project.git}}">View Code</a></button>
