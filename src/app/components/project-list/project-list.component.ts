@@ -1,7 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {Project, projects} from './Projects';
 import {NavigationService} from '../../services/navigation.service';
-import {gsap} from "gsap";
+import {gsap} from 'gsap';
 
 @Component({
   selector: 'app-projects',

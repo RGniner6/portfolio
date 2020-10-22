@@ -17,7 +17,7 @@ export class ContactComponent implements OnInit {
   @ViewChild('infoPanel', {static: true}) infoPanel: ElementRef;
   @ViewChild('info', {static: true}) info: ElementRef;
   @ViewChild('card', {static: true}) card: ElementRef;
-  @ViewChild('form', {static: true}) formRef: ElementRef;
+  @ViewChild('formRef', {static: true}) formRef: ElementRef;
 
   form: FormGroup;
   tl: any;
