@@ -18,6 +18,10 @@ export class ContactComponent implements OnInit {
   @ViewChild('info', {static: true}) info: ElementRef;
   @ViewChild('card', {static: true}) card: ElementRef;
   @ViewChild('formRef', {static: true}) formRef: ElementRef;
+  @ViewChild('prompt', {static: true}) prompt: ElementRef;
+  @ViewChild('links', {static: true}) links: ElementRef;
+  @ViewChild('infoIntro', {static: true}) infoIntro: ElementRef;
+  @ViewChild('resume', {static: true}) resume: ElementRef;
 
   form: FormGroup;
   tl: any;
@@ -116,10 +120,15 @@ export class ContactComponent implements OnInit {
         duration: 0.8,
         translateY: 50,
       })
-      .from(this.info.nativeElement.childNodes, {
+      .from([this.infoIntro.nativeElement, this.prompt.nativeElement, this.links.nativeElement.childNodes], {
         translateY: 20,
         stagger: 0.2
-      });
+      }, 'details')
+      .from(this.resume.nativeElement.childNodes, {
+        translateY: 20,
+        stagger: 0.2
+      }, 'details')
+    ;
   }
 
   @HostListener('window:resize', ['$event'])

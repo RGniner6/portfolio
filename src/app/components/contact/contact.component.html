@@ -12,8 +12,8 @@
           Have a question or want to work together? Let's get in touch!
         </div>
         <div #info class="contact-details">
-          <p class="prompt">Leave me a message {{isMobile() ? 'below' : 'on the right'}} or reach me on: </p>
-          <ul class="links">
+          <p #prompt class="prompt">Leave me a message {{isMobile() ? 'below' : 'on the right'}} or reach me on: </p>
+          <ul #links class="links">
             <li><a href="mailto:rahul.gururaj96@gmail.com" target="_blank">
               <button>
                 <!--            <fa-icon [icon]="['fas', 'envelope']"></fa-icon>-->
@@ -32,7 +32,7 @@
             </button></a></li>-->
           </ul>
         </div>
-        <div class="resume">
+        <div #resume class="resume">
           <p class="prompt">Want more information?</p>
           <button class="button">Download resume</button>
         </div>
