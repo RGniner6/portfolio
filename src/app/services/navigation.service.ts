@@ -1,4 +1,5 @@
 import {ElementRef, Injectable} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -6,7 +7,7 @@ import {ElementRef, Injectable} from '@angular/core';
 export class NavigationService {
   private links: {[elementName: string]: ElementRef} = {};
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   addLink(name: string, link: ElementRef) {
     this.links[name] = link;
@@ -17,7 +18,12 @@ export class NavigationService {
   }
 
   scrollto(name: string) {
-    this.links[name].nativeElement.scrollIntoView({behavior: 'smooth'});
+    if (this.router.url !== '') {
+      this.router.navigate(['/']);
+      setTimeout(() => {this.links[name].nativeElement.scrollIntoView({ behavior: 'smooth'});});
+    } else {
+      this.links[name].nativeElement.scrollIntoView({behavior: 'smooth'});
+    }
   }
 
   // toggleNavBarVisibility()
