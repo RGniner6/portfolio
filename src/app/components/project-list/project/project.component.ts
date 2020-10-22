@@ -20,6 +20,7 @@ export class ProjectComponent implements OnInit, AfterViewInit {
   @ViewChild('builtWith', { static: true }) private builtWith: ElementRef;
   @ViewChildren('techList') private techList: QueryList<ElementRef>;
   @ViewChild('buttons') private buttons: ElementRef;
+  @ViewChild('cardTitle') private cardTitle: ElementRef;
   tl: any;
   detailsTl: any;
   hideDetails = true;
@@ -70,6 +71,10 @@ export class ProjectComponent implements OnInit, AfterViewInit {
         translateY: 50,
       }, 'first')
       .from(this.builtWith.nativeElement, {
+        translateY: 20,
+        duration: 0.3,
+      }, 'second')
+      .from(this.cardTitle.nativeElement, {
         translateY: 20,
         duration: 0.3,
       }, 'second')
