@@ -1,6 +1,6 @@
 <!--<h1><ng-content select=".banner-header"></ng-content></h1>-->
 <div class="project">
-  <div *ngIf="!isMobile()" #details class="details" [ngClass]="{'flipped': !isLeft}">
+  <div #details class="details" [ngClass]="{'flipped': !isLeft}">
     <h3 #title class="title">{{project.name}}</h3>
     <p #desc class="desc">{{project.description}}</p>
   </div>

@@ -45,8 +45,8 @@ export class ProjectComponent implements OnInit, AfterViewInit {
       },
     });
 
-    if (!this.isMobile()) {
-      this.detailsTl = gsap.timeline({
+
+    this.detailsTl = gsap.timeline({
         scrollTrigger: {
           trigger: this.details.nativeElement,
           start: 'top 80%'
@@ -57,9 +57,6 @@ export class ProjectComponent implements OnInit, AfterViewInit {
           ease: 'power1.inOut',
         },
       });
-    }
-
-    // TODO: Make description retractable for mobile
   }
 
   getChildrenRefs(queryList: QueryList<ElementRef>) {
@@ -89,17 +86,17 @@ export class ProjectComponent implements OnInit, AfterViewInit {
   }
 
   slideDetailsIn() {
-    this.detailsTl
-      .from(this.details?.nativeElement, {
-        translateX: this.isMobile()? 0: this.isLeft? 30:-30,
-        translateY: this.isMobile()? 30: 0,
-        autoAlpha: 1,
-      }, 'second')
-      .from(this.details?.nativeElement.childNodes, {
-        translateY: 20,
-        stagger: 0.3,
-      });
-    return this.detailsTl;
+      this.detailsTl
+        .from(this.details?.nativeElement, {
+          translateX: this.isMobile()? 0: this.isLeft? 30:-30,
+          translateY: this.isMobile()? 30: 0,
+          autoAlpha: 1,
+        }, 'second')
+        .from(this.details?.nativeElement.childNodes, {
+          translateY: 20,
+          stagger: 0.3,
+        });
+      return this.detailsTl;
   }
 
 

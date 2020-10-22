@@ -14,3 +14,15 @@
     margin: 20px 0;
   }
 }
+
+.github-prompt {
+  width: 100%;
+  text-align: center;
+
+  button {
+    width: 300px;
+    @media (max-width: 768px) {
+      width: 80%;
+    }
+  }
+}
