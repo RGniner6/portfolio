@@ -1,12 +1,15 @@
 <section #contactRef class="contact">
   <div class="contact-text">
     <div #sectionHeader class="section-header">Contact & more</div>
-    <div #sectionDescription class="section-description">
+    <div *ngIf="isMobile" #sectionDescription class="section-description">
       Have a question or want to work together? Let's get in touch!
     </div>
   </div>
   <div class="section-body">
     <div #infoPanel class="info-panel">
+      <div *ngIf="!isMobile" class="info-intro">
+        Have a question or want to work together? Let's get in touch!
+      </div>
       <div #info class="contact-details">
         <p class="prompt">Leave me a message {{isMobile ? 'above':'on the right'}} or reach me on: </p>
         <ul class="links">
@@ -23,10 +26,10 @@
             <span>Github</span>
           </button></a></li>-->
         </ul>
-        <div class="resume">
-          <p class="prompt">Want more information?</p>
-          <button class="button">Download resume</button>
-        </div>
+      </div>
+      <div class="resume">
+        <p class="prompt">Want more information?</p>
+        <button class="button">Download resume</button>
       </div>
     </div>
     <div class="message-panel">
