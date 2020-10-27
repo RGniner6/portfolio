@@ -16,7 +16,7 @@ export const projects: Project[] = [
       '      reprehenderit totam vel veniam.',
     tech: ['Angular', 'Node.js', 'Firebase'],
     git: 'https://github.com/RGniner6/sorrowscopes-portal.git',
-    live: 'https://github.com/RGniner6/sorrowscopes-portal.git',
+    // live: 'https://github.com/RGniner6/sorrowscopes-portal.git',
   },
   {
     id: 2,
@@ -25,7 +25,8 @@ export const projects: Project[] = [
       '      distinctio dolore dolores doloribus dolorum explicabo magnam maiores minus, natus neque, quam recusandae\n' +
       '      reprehenderit totam vel veniam.',
     tech: ['Angular', 'Node.js', 'Firebase'],
-    git: 'https://github.com/RGniner6/sorrowscopes-portal.git'
+    git: 'https://github.com/RGniner6/kanban',
+    live: 'https://kanban-d68ed.web.app/'
   },
   {
     id: 3,
@@ -34,7 +35,7 @@ export const projects: Project[] = [
       '      distinctio dolore dolores doloribus dolorum explicabo magnam maiores minus, natus neque, quam recusandae\n' +
       '      reprehenderit totam vel veniam.',
     tech: ['Angular', 'Node.js', 'Firebase'],
-    git: 'https://github.com/RGniner6/sorrowscopes-portal.git'
+    git: 'https://github.com/RGniner6/run-stats'
   },
   // {
   //   id: 4,

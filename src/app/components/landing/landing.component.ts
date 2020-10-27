@@ -29,7 +29,7 @@ export class LandingComponent implements OnInit {
 
     this.tl
       .set(this.arm.nativeElement, {transformOrigin : '0 70%'})
-      .from(this.illustration.nativeElement, {duration: 1.5, translateX: '150%', ease: 'power3'})
+      .from(this.illustration.nativeElement, {duration: 1.5, delay: 0.4, translateX: '150%', ease: 'power3'}, 'intro-text')
       .to(this.arm.nativeElement, {duration: 0.3, yoyo: true, repeat: 5, rotation: 10, ease: 'power1.inOut'});
   }
 
