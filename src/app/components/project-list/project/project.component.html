@@ -5,7 +5,7 @@
     <p #desc class="desc">{{project.description}}</p>
   </div>
   <div #card class="card">
-    <img src="assets/example.png" alt="Screenshot of project: {{project.name}}">
+    <img [src]="projectImage" alt="Screenshot of project: {{project.name}}">
     <div class="card-content">
       <div #cardTitle class="card-title">{{project.name}}</div>
       <div class="built-with">

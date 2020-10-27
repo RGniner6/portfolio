@@ -39,4 +39,8 @@ export class ProjectDetailsComponent implements OnInit {
     this.navigation.scrollto(path);
   }
 
+  get projectImage() {
+    return this.project.imageName ?
+      `assets/projects/${this.project.imageName}.png` : 'https://upload.wikimedia.org/wikipedia/commons/7/71/Black.png'
+  }
 }

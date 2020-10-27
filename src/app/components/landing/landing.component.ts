@@ -38,4 +38,8 @@ export class LandingComponent implements OnInit {
       .from(this.greeting.nativeElement, {duration: 1, translateX: -160, opacity: 0, ease: 'power1.inOut'}, 'intro-text')
       .from(this.intro.nativeElement, {duration: 1.5, translateX: 130, scale: 1.2, opacity: 0,  }, 'intro-text');
   }
+
+  navigateTo(link: string) {
+    this.navigationService.scrollto(link);
+  }
 }

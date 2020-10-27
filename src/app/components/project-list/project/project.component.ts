@@ -119,4 +119,9 @@ export class ProjectComponent implements OnInit, AfterViewInit {
   isMobile(): boolean {
     return window.innerWidth < 768.1;
   }
+
+  get projectImage() {
+    return this.project.imageName ?
+      `assets/projects/${this.project.imageName}.png` : 'https://upload.wikimedia.org/wikipedia/commons/7/71/Black.png'
+  }
 }

@@ -94,5 +94,10 @@ button {
     transform: scaleY(1);
   }
 
+  &.black {
+    background-color: black;
+    color: white;
+  }
+
 
 }
