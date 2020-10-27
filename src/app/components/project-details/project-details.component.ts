@@ -3,6 +3,7 @@ import {Project} from '../project-list/Projects';
 import {ProjectService} from '../../services/project.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {switchMap} from 'rxjs/operators';
+import {NavigationService} from '../../services/navigation.service';
 
 @Component({
   selector: 'app-project-details',
@@ -22,7 +23,8 @@ export class ProjectDetailsComponent implements OnInit {
 
   constructor(private projectService: ProjectService,
               private route: ActivatedRoute,
-              private router: Router) { }
+              private router: Router,
+              private navigation: NavigationService) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -31,6 +33,10 @@ export class ProjectDetailsComponent implements OnInit {
         this.router.navigate(['/']);
       }
     });
+  }
+
+  navigateTo(path: string) {
+    this.navigation.scrollto(path);
   }
 
 }

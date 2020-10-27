@@ -17,7 +17,7 @@
           </div>
           <ul #buttonsFs class="buttons">
             <li class="back-item">
-              <button #cardToggleFs class="button back"><a routerLink="/">< Back</a></button>
+              <button #cardToggleFs class="button back"><a (click)="navigateTo('projects')">< Back</a></button>
             </li>
             <li>
               <button #gitFs *ngIf="project.git" class="button git"><a href="{{project.git}}" target="_blank">View Code</a></button>
