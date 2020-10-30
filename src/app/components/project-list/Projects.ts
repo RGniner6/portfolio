@@ -14,9 +14,9 @@ export const projects: Project[] = [
     name: 'Sorrowscopes',
     description: 'A joke horoscope app that automatically scraped tweets from twitter for its content using puppeteer.' +
       'It uses the twitter API to update the database with new content',
-    tech: ['Angular', 'Node.js', 'Express', 'MongoDB', 'Puppeteer'],
+    tech: ['Angular', 'Node.js', 'Express', 'MongoDB', 'Puppeteer', 'Heroku'],
     git: 'https://github.com/RGniner6/sorrowscopes-portal.git',
-    // live: 'https://github.com/RGniner6/sorrowscopes-portal.git',
+    live: 'https://sorrowscopes.herokuapp.com/',
     imageName: 'sorrowscopes'
   },
   {
