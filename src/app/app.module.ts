@@ -24,6 +24,7 @@ import {faGithub} from '@fortawesome/free-brands-svg-icons/faGithub';
 import { ProjectDetailsComponent } from './components/project-details/project-details.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
+import { SkillsComponent } from './components/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { FooterComponent } from './components/footer/footer.component';
     ContactComponent,
     ProjectDetailsComponent,
     FooterComponent,
+    SkillsComponent,
   ],
   imports: [
     BrowserModule,
