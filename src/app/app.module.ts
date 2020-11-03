@@ -25,6 +25,8 @@ import { ProjectDetailsComponent } from './components/project-details/project-de
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import {faFire} from '@fortawesome/free-solid-svg-icons/faFire';
+import {faTerminal} from '@fortawesome/free-solid-svg-icons/faTerminal';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,8 @@ import { SkillsComponent } from './components/skills/skills.component';
 export class AppModule {
   constructor(private library: FaIconLibrary) {
     library.addIcons(
-      faLinkedin, faEnvelope, faGithubSquare, faGithub, faAddressCard, faCode, faAngular, faNodeJs, faFileAlt, faGrin
+      faLinkedin, faEnvelope, faGithubSquare, faGithub, faAddressCard,
+      faCode, faAngular, faNodeJs, faFileAlt, faGrin, faFire, faTerminal
     );
   }
 }

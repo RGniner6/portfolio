@@ -1,0 +1,43 @@
+.footer {
+  max-width: 992px;
+  margin: 50px auto;
+  text-align: center;
+
+  &::before {
+    display: block;
+    content: "";
+    height: 100%;
+    width: 70%;
+    margin: 20px auto 50px auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.16);
+    left: 50%;
+  }
+}
+
+.icons {
+  margin: 20px 0;
+  font-size: 20px;
+  fa-icon {
+    margin: 0 20px;
+  }
+}
+
+.build-desc {
+  font-size: 14px;
+  transition: 0.3s;
+  border-bottom: 0.5px solid rgba(0,0,0,0);
+
+  &:hover {
+    border-bottom: 0.5px solid rgba(0,0,0,1);
+    padding-bottom: 1px;
+  }
+}
+
+
+
+
+
+
+
+
+

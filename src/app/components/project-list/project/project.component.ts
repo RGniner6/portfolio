@@ -95,7 +95,7 @@ export class ProjectComponent implements OnInit, AfterViewInit {
         .from(this.details?.nativeElement, {
           translateX: this.isMobile()? 0: this.isLeft? 30:-30,
           translateY: this.isMobile()? 30: 0,
-          autoAlpha: 1,
+          autoAlpha: 0,
         }, 'second')
         .from(this.details?.nativeElement.childNodes, {
           translateY: 20,
